@@ -16,9 +16,8 @@
     <link rel="stylesheet" href="pages/index.css" />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Noto+Serif&display=swap"
-      rel="stylesheet"
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet"
     />
 
     <!-- Favicon -->
@@ -28,19 +27,79 @@
   <body>
     <div class="page">
       <header class="header">
-        <img
-          src="images/logo_coffeeshop_light.svg"
-          alt="Coffee Shop Logo"
-          class="logo"
-        />
         <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="#about" class="nav__link">About</a></li>
-            <li><a href="#menu" class="nav__link">Menu</a></li>
-            <li><a href="#contact" class="nav__link">Contact</a></li>
+          <a href="#" class="nav__logo" aria-label="Coffee Shop logo"></a>
+          <ul class="nav__links">
+            <li class="nav__link"><a href="#menu">Menu</a></li>
+            <li class="nav__link"><a href="#recipes">Recipes</a></li>
+            <li class="nav__link"><a href="#reservation">Book a table</a></li>
+            <li class="nav__link"><a href="#contacts">Contacts</a></li>
           </ul>
         </nav>
+
+        <div class="header__content">
+          <h1 class="header__title">
+            <span class="header__span-accent">Specialty coffee</span><br />
+            in the Triple Peaks Library
+          </h1>
+
+          <p class="header__description">
+            Welcome to our study zone! We've got the coffee to energize you and
+            the cozy vibes to help you get creative.
+          </p>
+
+          <div class="header__footer">
+            <p class="header__paragraph">Hours:</p>
+            <p class="header__paragraph">Monday – Friday (10:00 – 19:00)</p>
+            <p class="header__paragraph">Saturday – Sunday (11:00 – 18:00)</p>
+            <p class="header__paragraph">
+              200 Success Avenue, The Town of Triple Peaks
+            </p>
+          </div>
+        </div>
+
+        <div class="header__image"></div>
       </header>
+
+      <main class="content">
+        <section id="recipes" class="recipes" aria-labelledby="recipes-title">
+          <h2 id="recipes-title" class="recipes__title">Recipes</h2>
+          <p class="recipes__subtitle">
+            Check out some recipes we've collected for<br />
+            your home-brewing convenience:
+          </p>
+
+          <div class="recipes__videos">
+            <div class="recipes__video">
+              <iframe
+                class="recipes__iframe"
+                src="https://www.youtube.com/embed/j6VlT_jUVPc"
+                title="Aeropress recipe"
+                allowfullscreen
+              ></iframe>
+              <p class="recipes__video-caption">Aeropress recipe ~5 min</p>
+            </div>
+
+            <div class="recipes__video">
+              <iframe
+                class="recipes__iframe"
+                src="https://www.youtube.com/embed/st571DYYTR8"
+                title="French press recipe"
+                allowfullscreen
+              ></iframe>
+              <p class="recipes__video-caption">French press recipe ~15 min</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- placeholders so nav works; we’ll style later -->
+        <section id="menu" hidden></section>
+        <section id="reservation" hidden></section>
+        <section id="contacts" hidden></section>
+      </main>
+
+      <!--
+
       <main class="content">
         <section class="hero">
           <h1 class="hero__title">Enjoy Your Coffee</h1>
@@ -78,15 +137,38 @@
           </ul>
         </section>
 
-        <section class="recipes" id="recipes">
-          <h2 class="recipes__title">Our Recipes</h2>
-          <p class="recipes__description">Try our special blends at home</p>
-        </section>
-      </main>
+        <section class="reservation" id="reservation">
+  <h2 class="reservation__title">Book a table</h2>
+  <p class="reservation__description">
+    Reserve your spot to enjoy our specialty coffee in a cozy atmosphere.
+  </p>
+  <form class="reservation__form">
+    <input
+      type="text"
+      class="reservation__input"
+      placeholder="Your name"
+      required
+    />
+    <input
+      type="email"
+      class="reservation__input"
+      placeholder="Your email"
+      required
+    />
+    <input
+      type="date"
+      class="reservation__input"
+      required
+    />
+    <button type="submit" class="reservation__button">Reserve</button>
+  </form>
+</section>
 
       <footer class="footer">
-        <p>© 2025 Coffee Shop</p>
+  <p>© 2025 Coffee Shop. All rights reserved.</p>
+</footer>
       </footer>
     </div>
+    -->
   </body>
 </html>
