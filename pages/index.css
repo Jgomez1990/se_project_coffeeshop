@@ -110,3 +110,9 @@ html {
   padding: 20px;
   font-size: 14px;
 }
+
+.test-noto {
+  font-family: "Noto Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
