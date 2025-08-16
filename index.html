@@ -95,11 +95,58 @@
           </div>
         </section>
 
-        <section id="reservation" class="reservation" hidden></section>
-<section id="menu" class="menu" hidden></section>
-<section id="about" class="about" hidden></section>
-<section id="contacts" class="contacts" hidden></section>
 
+<section id="reservation" class="reservation" aria-labelledby="reservation-title">
+  <div class="reservation__container">
+    <h2 id="reservation-title" class="reservation__title">Book a table</h2>
+    <p class="reservation__subtitle">We’ll confirm your reservation by email.</p>
+
+    <form class="reservation__form form" name="reservation" novalidate>
+      <fieldset class="form__fieldset reservation__fieldset">
+        <label for="reservation-name" class="form__label reservation__label">Name</label>
+        <input id="reservation-name" name="name" type="text" class="form__input reservation__input" required />
+
+        <label for="reservation-guests" class="form__label reservation__label">Number of guests</label>
+        <select id="reservation-guests" name="guests" class="form__input reservation__input" required>
+          <option value="" disabled selected>Select 1–8</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+
+        <label for="reservation-datetime" class="form__label reservation__label">Date and time</label>
+        <input id="reservation-datetime" name="datetime" type="datetime-local" class="form__input reservation__input" required />
+
+        <label for="reservation-email" class="form__label reservation__label">Email</label>
+        <input id="reservation-email" name="email" type="email" class="form__input reservation__input" placeholder="name@example.com" required />
+
+        <div class="form__checkbox-group reservation__checkbox-group">
+          <input id="reservation-consent" name="consent" type="checkbox" class="form__checkbox reservation__checkbox" required />
+          <label for="reservation-consent" class="form__label reservation__label">I agree to the terms and privacy policy</label>
+        </div>
+      </fieldset>
+
+        </fieldset>
+
+      <button type="submit" class="form__button reservation__button">Reserve</button>
+    </form>
+    
+<section id="menu" class="menu" aria-labelledby="menu-title" hidden>
+  <h2 id="menu-title" class="menu__title">Menu</h2>
+  <p class="menu__subtitle">We brew with love. Choose your favorite:</p>
+
+  <ul class="menu__items">
+    <li class="menu__item">Espresso — $3</li>
+    <li class="menu__item">Cappuccino — $4</li>
+    <li class="menu__item">Latte — $4.5</li>
+    <li class="menu__item">Mocha — $5</li>
+  </ul>
+</section>
       </main>
 
       <footer class="footer">

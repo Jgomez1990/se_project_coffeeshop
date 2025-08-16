@@ -1,128 +1,56 @@
-/* Base header container */
-.header {
-  background-color: #ffffff;
-  /* When you add the asset, this should exist in images/: */
-  background-image: url("../../images/background_header.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  height: 800px; /* brief */
-  padding: 80px 80px 80px; /* side paddings are 80px per brief visuals */
-  position: relative; /* enables positioned children like image/footer */
-  box-sizing: border-box;
+/* Reservation Section */
+.reservation {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
 }
 
-/* NAV BAR (block: nav) */
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 124px; /* spacing down to title block */
+.reservation__title {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-/* logo sits a bit more to the left than text; brief suggests relative shift */
-.nav__logo {
-  display: inline-block;
-  width: 105px;
-  height: 39px;
-  background: url("../../images/logo_coffeeshop_light.svg") center/contain
-    no-repeat;
-  position: relative;
-  left: -30px; /* gentle left nudge; tweak if your fig looks off */
+.reservation__subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
 }
 
-/* nav links */
-.nav__links {
-  display: flex;
-  gap: 28px; /* brief spacing between items */
-  list-style: none;
+.reservation__form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reservation__fieldset {
+  border: none;
   margin: 0;
   padding: 0;
 }
 
-.nav__link a {
-  font-family: "Inter", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  color: #000000;
+.reservation__input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-/* CONTENT block (title + description + footer) */
-.header__content {
-  max-width: 729px; /* title column width from brief page 06 */
+.reservation__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0;
 }
 
-/* Title: two lines, first line is blue italic accent span */
-.header__title {
-  margin: 0 0 30px;
-  font-family: "Inter", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 60px; /* main line “in the Triple Peaks Library” */
-  line-height: 72px;
-  letter-spacing: -0.6px;
+.reservation__button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-/* Accent “Specialty coffee” */
-.header__span-accent {
-  display: block; /* forces its own line as per brief */
-  font-family: "Noto Serif", "Times New Roman", serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 60px;
-  line-height: 72px;
-  color: #3f96f3;
-}
-
-/* Description paragraph */
-.header__description {
-  max-width: 683px;
-  margin: 0 0 80px;
-  font-family: "Noto Serif", "Times New Roman", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  color: #000000;
-}
-
-/* Footer (Hours + address). You may absolutely-position if you prefer;
-   here we’ll keep flow + push it down with spacing; brief mentions 
-   similar pattern to P1 where footer sits at bottom with margin-top:auto
-   if using flex columns. */
-.header__footer {
-  display: grid;
-  gap: 5px; /* tiny vertical spacing */
-  max-width: 438px; /* per brief width under sizes */
-  color: #6f6f6f;
-}
-
-.header__paragraph {
-  margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  color: #6f6f6f; /* brief color for hours/address */
-}
-
-/* Header image: the illustration on the right */
-.header__image {
-  position: absolute;
-  right: 80px;
-  top: 183px;
-  width: 646px;
-  height: 568px;
-  background: url("../../images/inside_coffee_shop.png") center/contain
-    no-repeat;
-}
-
-/* Helpful: keep the main page container padded like the brief grid */
-.page {
-  box-sizing: border-box;
+.reservation__button:hover {
+  background-color: #0056b3;
 }
