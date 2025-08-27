@@ -2,7 +2,7 @@
 @import url("../blocks/recipes/recipes.css");
 @import url("../blocks/reservation/reservation.css");
 @import url("../blocks/footer/footer.css");
-@import url(../blocks/menu.css);
+@import url("../blocks/contacts/contacts.css");
 
 body {
   font-family: "Noto Serif", serif;
@@ -71,51 +71,6 @@ html {
   color: #888;
 }
 
-.menu {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-/* Menu: remove default bullets + left padding */
-.menu__items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* (optional, keeps bullets off even if list-style leaks) */
-.menu__item {
-  list-style: none;
-}
-
-.menu__list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-}
-
-.menu__image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 10px;
-  border-radius: 8px;
-}
-
-.menu__item {
-  background-color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  font-weight: bold;
-}
-
 .footer {
   background-color: #333;
   color: white;
@@ -130,7 +85,6 @@ html {
   font-weight: 400;
 }
 
-/* Reservation section */
 .reservation {
   padding: 40px;
   background-color: #f9f9f9;
@@ -181,3 +135,131 @@ html {
 .form__submit:hover {
   background-color: #8b5a38;
 }
+
+.menu__title {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+.menu__subtitle {
+  font-family: "Noto Serif", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin: 24px auto 0;
+  max-width: 780px;
+}
+
+.menu__grid {
+  max-width: 960px;
+  margin: 100px auto 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu__heading {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  margin: 0 0 12px;
+}
+
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.menu__price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 56px;
+  white-space: nowrap;
+  font-weight: 700;
+}
+.menu__price::before {
+  content: "";
+  flex: 1 1 auto;
+  border-bottom: 2px solid #d8d8d8;
+  margin-right: 12px;
+  transform: translateY(-0.5px);
+}
+.menu__item {
+  flex: 0 0 120px;
+}
+
+#menu {
+  position: relative;
+  padding: 0 0 120px;
+  background-color: #fff;
+  z-index: 0;
+  overflow: visible;
+  font-style: normal;
+}
+
+#menu {
+  --bubble-big-size: 540px;
+  --bubble-big-top: 160px;
+  --bubble-small-size: 200px;
+  --bubble-small-top: 100px;
+  --bubble-small-right: 40px;
+}
+
+#menu::before {
+  content: "";
+  position: absolute;
+  width: var(--bubble-big-size);
+  height: var(--bubble-big-size);
+  left: 50%;
+  transform: translateX(-50%);
+  top: var(--bubble-big-top);
+  background: #fcf5e5;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#menu::after {
+  content: "";
+  position: absolute;
+  width: var(--bubble-small-size);
+  height: var(--bubble-small-size);
+  right: var(--bubble-small-right);
+  top: var(--bubble-small-top);
+  background: #fcf5e5;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.menu__bubble {
+  display: none !important;
+}
+.menu__grid::before,
+.menu__grid::after {
+  content: none !important;
+  background: none !important;
+}
+
+@import url("./footer.css");

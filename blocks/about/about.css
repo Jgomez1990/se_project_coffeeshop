@@ -1,0 +1,132 @@
+.about {
+  position: relative;
+  background: #0a2850;
+  color: #fff;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  column-gap: 80px;
+  justify-content: center;
+  padding: 100px 0;
+  z-index: 0;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 426px;
+  height: 426px;
+  border-radius: 50%;
+  background: #2f80ed;
+  left: -152px;
+  top: -129px;
+  opacity: 1;
+  z-index: 0;
+}
+
+.about__title {
+  grid-column: 1;
+  align-self: start;
+  margin: 0 0 80px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 52px;
+  max-width: 251px;
+  z-index: 1;
+}
+
+.about__content {
+  grid-column: 2;
+  max-width: 660px;
+  z-index: 1;
+}
+.about__paragraph {
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 0 20px;
+}
+.about__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.about__grid {
+  max-width: 960px;
+  margin: 100px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.about__card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.about__heading {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 0 12px;
+}
+
+.about__text {
+  font-family: "Noto Serif", serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #061621;
+  margin: 0 0 12px;
+}
+
+.about__map {
+  grid-column: 1 / -1;
+  height: 380px;
+  border-radius: 8px;
+  background: #fff7e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b6b6b;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 64px 0;
+  }
+  .about__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-left: 24px;
+  }
+  .about__content {
+    margin: 24px;
+    max-width: 100%;
+  }
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.about__grid,
+.about__map {
+  display: none !important;
+}
+
+.about__heading {
+  display: none !important;
+}
+
+.about__card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}

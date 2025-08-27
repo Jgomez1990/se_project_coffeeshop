@@ -1,40 +1,49 @@
+/* Base reservation section — restores background and layout */
 .reservation {
-  background-color: #dfeefc;
+  background-color: #d9e7ff;
   background-image: url("../../images/background_reservation.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 100px 20px;
+  padding: 100px 0 120px;
   display: grid;
   place-items: center;
 }
 
+/* TEMP off (duplicate):
 .reservation__title {
   font-size: 2rem;
   margin-bottom: 10px;
 }
+*/
 
+/* TEMP off (unused):
 .reservation__description {
   font-size: 1rem;
   margin-bottom: 30px;
   color: #555;
 }
+*/
 
+/* TEMP off (duplicate flex version):
 .reservation__form {
   max-width: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  text-align: center; /* added to center form content */
+  text-align: center;  (added to center form content)
 }
+*/
 
+/* TEMP off (duplicate – using .form__input instead):
 .reservation__input {
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+*/
 
 .reservation__button {
   height: 60px;
@@ -105,22 +114,24 @@
 }
 
 /* Tidy up the checkbox row */
+/* TEMP off (duplicate – keeping later 12px gap version):
 .reservation__checkbox-group {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+*/
 
 /* ----- Brief alignment with existing project classes inside .reservation ----- */
 /* Inputs: support both reservation__input and generic form__input inside the reservation section */
 .reservation .form__input {
   border: 1px solid #838383;
   border-radius: 4px;
-  height: 40px;
+  height: 60px; /* match brief */
   box-sizing: border-box;
-  padding: 0 12px;
-  font-size: 16px;
-  line-height: 24px;
+  padding: 0 15px; /* match brief */
+  font-size: 18px;
+  line-height: 30px;
   width: 100%;
 }
 
@@ -137,22 +148,23 @@
 }
 
 /* Button: support both reservation__button and generic form__button inside the reservation section */
+/* TEMP off (duplicate — keeping 60px .form__button below):
 .reservation .form__button,
 .reservation__button {
   height: 40px;
   min-width: 160px;
   border: none;
   border-radius: 4px;
-  background-color: #1878dc; /* brief: primary blue */
+  background-color: #1878dc;
   color: #fff;
   cursor: pointer;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   transition: background-color 0.2s ease;
 }
+*/
 
 .reservation .form__button:hover,
 .reservation__button:hover {
@@ -169,7 +181,7 @@
 
 /* Force the reservation button to match the brief even if it uses project-generic classes */
 .reservation button {
-  height: 40px;
+  height: 60px; /* was 40px; ensure big primary button */
   min-width: 160px;
   border: none;
   border-radius: 4px;
@@ -179,7 +191,7 @@
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
     sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px; /* was 14px */
   line-height: 20px;
   transition: background-color 0.2s ease;
 }
@@ -246,7 +258,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 
 /* checkbox box size */
@@ -269,6 +281,7 @@
   font-size: 16px;
   line-height: 20px;
   transition: background-color 0.2s ease;
+  margin-top: 8px;
 }
 
 /* hover state */
@@ -305,16 +318,6 @@
   font-size: 12px;
   line-height: 16px;
   color: #838383; /* brief says input borders & placeholders are this gray */
-}
-
-/* give a bit more breathing room below the checkbox row */
-.reservation__checkbox-group {
-  margin-top: 8px;
-}
-
-/* space above the button */
-.form__button {
-  margin-top: 8px;
 }
 
 .reservation__container {

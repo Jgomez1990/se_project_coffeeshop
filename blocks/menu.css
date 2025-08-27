@@ -1,33 +1,114 @@
 .menu {
+  position: relative;
   padding: 100px 0;
-  background-color: #fff;
+  background: #fff;
+  overflow: visible;
+  isolation: isolate;
 }
 
 .menu__title {
-  font-family: "Noto Serif", serif;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
   font-size: 44px;
-  line-height: 48px;
+  line-height: 52px;
   text-align: center;
   margin: 0 0 24px;
 }
-
 .menu__subtitle {
+  font-family: "Noto Serif", serif;
   font-size: 20px;
   line-height: 30px;
+  max-width: 780px;
+  margin: 0 auto 100px;
   text-align: center;
-  margin: 0 0 80px;
 }
 
-.menu__items {
-  list-style: none;
-  padding: 0;
+.menu__grid {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
   margin: 0 auto;
-  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 96px;
+  row-gap: 100px;
+}
+.menu__column:last-child {
+  grid-column: 1 / -1;
 }
 
-.menu__item {
+.menu__heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 20px;
   line-height: 30px;
-  text-align: center;
-  margin-bottom: 16px;
+  margin: 0 0 16px;
+}
+
+.menu__grid li,
+.menu__grid span,
+.menu__grid .menu__row {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+.menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  column-gap: 16px;
+}
+.menu__row::before {
+  content: "";
+  grid-column: 2;
+  border-bottom: 1px solid #cfcfcf;
+  transform: translateY(-0.2em);
+}
+.menu__item {
+  grid-column: 1;
+  font-family: "Noto Serif", serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+.menu__price {
+  grid-column: 3;
+  min-width: 48px;
+  text-align: right;
+  font-family: "Noto Serif", serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+.menu__row + .menu__row {
+  margin-top: 12px;
+}
+
+.menu {
+  position: relative;
+  padding: 100px 0;
+  background: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.menu__bubble--big {
+  width: 980px;
+  height: 980px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 120px;
+}
+
+.menu__bubble--small {
+  width: 220px;
+  height: 220px;
+  top: 140px;
+  right: -80px;
 }
